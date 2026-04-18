@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'challenges/challenges.css' %}">
+{% endblock %}
+
+{% block title %}Monthly Challenges{% endblock %}
+
+{% block content %}
+  {% include "challenges/includes/header.html" with active_page="home" %}
+  <h1>Monthly challenges</h1>
+  <p class="lede">Pick a month to see its challenge title and description.</p>
+  <nav class="card" aria-label="Months of the year">
+    <ul class="months">
+      {% for m in months %}
+      <li>
+        <a href="{% url 'challenges:month' month=m.slug %}">{{ m.label }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endblock %}

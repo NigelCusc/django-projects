@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'challenges/challenges.css' %}">
+{% endblock %}
+
+{% block title %}{{ title }} — {{ month_label }}{% endblock %}
+
+{% block content %}
+  {% include "challenges/includes/header.html" with active_page="challenge" %}
+  <p class="lede">{{ month_label }}</p>
+  <article class="card">
+    <h2 class="challenge-title">{{ title }}</h2>
+    <p class="challenge-desc">
+      {% if description %}
+        {{ description }}
+      {% else %}
+        No description available.
+      {% endif %}
+    </p>
+  </article>
+{% endblock %}

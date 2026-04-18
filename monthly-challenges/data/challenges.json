@@ -1,0 +1,49 @@
+{
+  "january": {
+    "title": "New Year Reset",
+    "description": "Start the year with a single daily habit: ten minutes of movement before your first screen. Track streaks in a notebook—consistency beats intensity."
+  },
+  "february": {
+    "title": "Kindness Sprint",
+    "description": "Each day, send one specific thank-you or encouragement to someone. Keep it short and genuine; rotate between colleagues, friends, and family."
+  },
+  "march": {
+    "title": "Spring Declutter",
+    "description": "Remove one physical item or digital subscription per day. Donate, recycle, or unsubscribe—end the month lighter than you began."
+  },
+  "april": {
+    "title": "Learn in Public",
+    "description": "Publish a short note weekly about something you learned at work. One paragraph, one takeaway—build a trail of small insights."
+  },
+  "may": {
+    "title": "Walk & Listen",
+    "description": "Take three fifteen-minute walks per week without podcasts or calls. Notice your neighborhood; jot one observation after each walk."
+  },
+  "june": {
+    "title": "Summer Skill Block",
+    "description": "Reserve thirty minutes, three times a week, for deliberate practice on one skill. Use a timer; same slot each session if you can."
+  },
+  "july": {
+    "title": "Digital Sunset",
+    "description": "Pick a cutoff time after which screens are off for reading or rest. Protect sleep; adjust the time if travel disrupts the routine."
+  },
+  "august": {
+    "title": "Cook One New Dish",
+    "description": "Each week, cook one recipe you have never made. Shop once, prep ahead, and photograph the result for your own archive."
+  },
+  "september": {
+    "title": "Back-to-Focus",
+    "description": "Use a single to-do list with a hard cap of three big items per day. Finish before adding more; celebrate closing loops."
+  },
+  "october": {
+    "title": "Deep Work October",
+    "description": "Block ninety minutes of uninterrupted work twice a week. Close chat, silence phone, and name the single outcome before you start."
+  },
+  "november": {
+    "title": "Gratitude Graph",
+    "description": "Each evening, write one sentence about something that went better than expected. Review the list on the last day of the month."
+  },
+  "december": {
+    "title": "Year-End Review"
+  }
+}

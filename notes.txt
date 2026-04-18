@@ -1,0 +1,9 @@
+MAC:
+Activate Virtual Environment:
+    source venv/bin/activate
+Run Application:
+    python manage.py runserver
+Add Application:
+    python manage.py startapp challenges
+Django Built-in Tags and Filters:
+    https://docs.djangoproject.com/en/6.0/ref/templates/builtins/
