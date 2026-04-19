@@ -22,3 +22,38 @@ A small site that lists monthly coding challenges and shows a detail page per mo
 - A project-level **404** template for custom “not found” pages.
 
 To run the app locally, use the `manage.py` and virtual environment inside `monthly-challenges/` (see the course for the usual `runserver` workflow).
+
+## `my_site`
+
+A small site with a **home page** and a **blog** area (list + post detail by slug). Built with Django 4.2.x while following the same Udemy course.
+
+**URLs**
+
+| Path | Purpose |
+|------|---------|
+| `/` | Home |
+| `/posts/` | Blog post list |
+| `/posts/<slug>/` | Single post (slug in the URL) |
+
+**Layout**
+
+- **`blog`** — Registered app (`blog.apps.BlogConfig` in `INSTALLED_APPS`); views and templates live under `blog/` (`blog/templates/blog/…`).
+- **Project templates** — Shared pieces in `my_site/templates/` (`base.html`, `navbar.html`); home page templates under `my_site/my_site/templates/home/`.
+- **Static files** — Project-level `static/` via `STATICFILES_DIRS`.
+
+The blog URLconf uses a namespace (`app_name = 'blog-posts'` in `blog/urls.py`), so named URLs look like `blog-posts:index` and `blog-posts:post_detail`.
+
+**Run locally**
+
+From the repo root:
+
+```bash
+cd my_site
+python -m venv .venv          # once
+source .venv/bin/activate     # macOS/Linux; on Windows use .venv\Scripts\activate
+pip install django~=4.2       # or match your course / pyproject
+python manage.py migrate
+python manage.py runserver
+```
+
+Then open [http://127.0.0.1:8000/](http://127.0.0.1:8000/).

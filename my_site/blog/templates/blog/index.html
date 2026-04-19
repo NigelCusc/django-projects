@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Blog Posts
+{% endblock %}
+
+{% block content %}
+
+<h1>Blog Posts</h1>
+
+<p>List of all blog posts.</p>
+
+<ul>
+  <li>
+    <a href="{% url 'blog-posts:post_detail' slug='first-post' %}">First Post</a>
+  </li>
+  <li>
+    <a href="{% url 'blog-posts:post_detail' slug='second-post' %}">Second Post</a>
+  </li>
+</ul>
+{% endblock %}
