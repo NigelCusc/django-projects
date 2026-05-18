@@ -1,10 +1,29 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
-  Post Detail
+  {{ title | title }}
+{% endblock %}
+
+{% block head_extra %}
+  <link rel="stylesheet" href="{% static 'blog/post_detail.css' %}">
 {% endblock %}
 
 {% block content %}
-<h1>Post Detail</h1>
-<p>Slug: {{ slug }}</p>
+<a href="{% url 'blog-posts:index' %}">Back to all posts</a>
+<div class="post-summary">
+  <img alt="{{ post.title }}" src="{% static 'blog/images/'|add:post.image %}">
+  <h3>{{ post.title }}</h3>
+  <p class="post-date">
+    {{ post.date | date:"d F Y" }}
+  </p>
+  <p class="post-excerpt">
+    {{ post.excerpt | truncatechars:100 }}
+  </p>
+</div>
+<div class="post-content">
+  <p>
+    {{ post.content }}
+  </p>
+</div>
 {% endblock %}

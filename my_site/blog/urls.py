@@ -5,5 +5,5 @@ app_name = 'blog-posts'
 
 urlpatterns = [
     path('', index, name='index'), # List of all posts
-    path('<str:slug>/', post_detail, name='post_detail'), # Detail view for a specific post
+    path('<slug:slug>/', post_detail, name='post_detail'), # Detail view for a specific post
 ]

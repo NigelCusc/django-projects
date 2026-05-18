@@ -1,21 +1,38 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
   Blog Posts
 {% endblock %}
 
+{% block head_extra %}
+  <link rel="stylesheet" href="{% static 'blog/index.css' %}"/>
+{% endblock %}
+
 {% block content %}
 
 <h1>Blog Posts</h1>
-
-<p>List of all blog posts.</p>
-
-<ul>
-  <li>
-    <a href="{% url 'blog-posts:post_detail' slug='first-post' %}">First Post</a>
-  </li>
-  <li>
-    <a href="{% url 'blog-posts:post_detail' slug='second-post' %}">Second Post</a>
-  </li>
-</ul>
+<section id="all-posts">
+  <p>List of all blog posts.</p>
+  <ul class="posts-list">
+    {% for post in page_obj %}
+    <li>
+      {% include "includes/post-button.html" with post=post %}
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="pagination">
+    <span class="step-links">
+      {% if page_obj.has_previous %}
+        <a href="?page=1">&laquo; first</a>
+      {% endif %}
+      <span class="current">
+        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+      </span>
+      {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">next</a>
+      {% endif %}
+    </span>
+  </div>
+</section>
 {% endblock %}

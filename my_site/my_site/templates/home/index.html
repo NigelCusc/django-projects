@@ -1,16 +1,34 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
   Home
 {% endblock %}
 
 {% block content %}
-<h1>Nigel Cuschieri's Django Blog</h1>
 
-<p>This is a blog about my journey learning Django.</p>
+  <section id="hero">
+    <h1>Nigel Cuschieri's Django Blog</h1>
+    <p>This is a blog about my journey learning Django.</p>
+  </section>
 
-<p>
-  <a href="{% url 'blog-posts:index' %}">View my blog posts</a>
-</p>
+  <section id="latest-posts">
+    <h2>Latest posts</h2>
+    <ul class="posts-list">
+      {% for post in latest_posts %}
+      <li>
+        {% include "includes/post-button.html" with post=post %}
+      </li>
+      {% endfor %}
+    </ul>
+    <a href="{% url 'blog-posts:index' %}">View my blog posts</a>
+  </section>
+
+  <section id="about">
+    <h2>My latest thoughts</h2>
+    <p>
+      This is a blog about my journey learning Django.
+    </p>
+  </section>
 
 {% endblock %}

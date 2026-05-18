@@ -1,6 +1,6 @@
 MAC:
 Activate Virtual Environment:
-    source venv/bin/activate
+    source .venv/bin/activate
 Run Application:
     python manage.py runserver
 Add Application:
