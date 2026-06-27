@@ -1,0 +1,38 @@
+We can:
+
+Create a new book:
+Book.objects.create(title='The Great Gatsby', rating=4)
+
+Get all books:
+Book.objects.all()
+
+Get a single book:
+Book.objects.get(id=1)
+Book.objects.get(title='The Great Gatsby')
+
+Update a book:
+harry_potter = Book.objects.get(title='Harry Potter')
+harry_potter.rating = 5
+harry_potter.save()
+
+Delete a book:
+harry_potter.delete()
+
+Filter books:
+Book.objects.filter(rating__gte=4) # greater than or equal to 4
+Book.objects.filter(title__icontains='Harry') # contains Harry
+Book.objects.exclude(rating__gte=4) # not greater than or equal to 4
+Book.objects.order_by('title')
+Book.objects.order_by('-rating') # descending order by rating
+Book.objects.order_by('rating', 'title') # ascending order by rating and title
+Book.objects.order_by('-rating', '-title') # descending order by rating and title
+Book.objects.order_by('rating', '-title') # ascending order by rating and descending order by title
+Book.objects.order_by('-rating', 'title') # descending order by rating and ascending order by title
+Book.objects.order_by('rating', 'title').reverse() # ascending order by rating and descending order by title
+
+from django.db.models import Q
+Book.objects.filter(Q(title__icontains='Harry') | Q(title__icontains='Potter')) # contains Harry or Potter
+Book.objects.filter(Q(title__icontains='Harry') & Q(title__icontains='Potter')) # contains Harry and Potter
+Book.objects.filter(Q(title__icontains='Harry') & ~Q(title__icontains='Potter')) # contains Harry and not Potter
+Book.objects.filter(Q(title__icontains='Harry') & ~Q(title__icontains='Potter')) # contains Harry and not Potter
+Book.objects.filter(Q(rating__gte=4) & Q(rating__lte=5)) # rating between 4 and 5

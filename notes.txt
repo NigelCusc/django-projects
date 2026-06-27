@@ -1,9 +1,19 @@
-MAC:
 Activate Virtual Environment:
-    source .venv/bin/activate
+    MAC:
+        source .venv/bin/activate
+    WINDOWS:
+        .venv\Scripts\activate.bat
 Run Application:
     python manage.py runserver
 Add Application:
     python manage.py startapp challenges
 Django Built-in Tags and Filters:
     https://docs.djangoproject.com/en/6.0/ref/templates/builtins/
+
+Make Migration:
+    python manage.py makemigrations
+Apply Migration:
+    python manage.py migrate
+
+Open Shell:
+    python manage.py shell
