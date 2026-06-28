@@ -1,5 +1,8 @@
 We can:
 
+Import the model:
+from book_outlet.models import Book
+
 Create a new book:
 Book.objects.create(title='The Great Gatsby', rating=4)
 
@@ -36,3 +39,12 @@ Book.objects.filter(Q(title__icontains='Harry') & Q(title__icontains='Potter')) 
 Book.objects.filter(Q(title__icontains='Harry') & ~Q(title__icontains='Potter')) # contains Harry and not Potter
 Book.objects.filter(Q(title__icontains='Harry') & ~Q(title__icontains='Potter')) # contains Harry and not Potter
 Book.objects.filter(Q(rating__gte=4) & Q(rating__lte=5)) # rating between 4 and 5
+Book.objects.filter(Q(rating__gt=3) | Q(is_bestselling=True), Q(author="George Orwell")) # rating greater than 3 or is bestseller and author is George Orwell
+
+Cross model queries:
+books_by_me = Book.objects.filter(author__name="Nigel") # books by author Nigel
+books_by_me = Book.objects.filter(author__name__contains="Nigel") # books by author containing Nigel
+
+Relationships:
+friends = models.ManyToManyField('self') # many to many relationship to itself
+product = models.ForeignKey('store.Product') # foreign key to another model

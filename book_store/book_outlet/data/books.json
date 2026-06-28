@@ -1,0 +1,22 @@
+[
+  { "title": "The Great Gatsby", "rating": 4, "is_bestselling": true, "author": { "name": "F. Scott Fitzgerald", "email": "f.scott.fitzgerald@example.com" } },
+  { "title": "To Kill a Mockingbird", "rating": 5, "is_bestselling": true, "author": { "name": "Harper Lee", "email": "harper.lee@example.com" } },
+  { "title": "1984", "rating": 5, "is_bestselling": true, "author": { "name": "George Orwell", "email": "george.orwell@example.com" } },
+  { "title": "Pride and Prejudice", "rating": 4, "is_bestselling": true, "author": { "name": "Jane Austen", "email": "jane.austen@example.com" } },
+  { "title": "The Catcher in the Rye", "rating": 4, "is_bestselling": false, "author": { "name": "J. D. Salinger", "email": "j.d.salinger@example.com" } },
+  { "title": "The Hobbit", "rating": 5, "is_bestselling": true, "author": { "name": "J. R. R. Tolkien", "email": "j.r.r.tolkien@example.com" } },
+  { "title": "Fahrenheit 451", "rating": 4, "is_bestselling": false, "author": { "name": "Ray Bradbury", "email": "ray.bradbury@example.com" } },
+  { "title": "Brave New World", "rating": 4, "is_bestselling": false, "author": { "name": "Aldous Huxley", "email": "aldous.huxley@example.com" } },
+  { "title": "Moby-Dick", "rating": 3, "is_bestselling": false, "author": { "name": "Herman Melville", "email": "herman.melville@example.com" } },
+  { "title": "War and Peace", "rating": 5, "is_bestselling": false, "author": { "name": "Leo Tolstoy", "email": "leo.tolstoy@example.com" } },
+  { "title": "Crime and Punishment", "rating": 5, "is_bestselling": false, "author": { "name": "Fyodor Dostoevsky", "email": "fyodor.dostoevsky@example.com" } },
+  { "title": "The Lord of the Rings", "rating": 5, "is_bestselling": true, "author": { "name": "J. R. R. Tolkien", "email": "j.r.r.tolkien@example.com" } },
+  { "title": "Jane Eyre", "rating": 4, "is_bestselling": false, "author": { "name": "Charlotte Bronte", "email": "charlotte.bronte@example.com" } },
+  { "title": "Wuthering Heights", "rating": 4, "is_bestselling": false, "author": { "name": "Emily Bronte", "email": "emily.bronte@example.com" } },
+  { "title": "The Picture of Dorian Gray", "rating": 4, "is_bestselling": false, "author": { "name": "Oscar Wilde", "email": "oscar.wilde@example.com" } },
+  { "title": "Harry Potter and the Philosopher's Stone", "rating": 5, "is_bestselling": true, "author": { "name": "J. K. Rowling", "email": "j.k.rowling@example.com" } },
+  { "title": "The Alchemist", "rating": 4, "is_bestselling": true, "author": { "name": "Paulo Coelho", "email": "paulo.coelho@example.com" } },
+  { "title": "The Kite Runner", "rating": 5, "is_bestselling": true, "author": { "name": "Khaled Hosseini", "email": "khaled.hosseini@example.com" } },
+  { "title": "Animal Farm", "rating": 5, "is_bestselling": true, "author": { "name": "George Orwell", "email": "george.orwell@example.com" } },
+  { "title": "Of Mice and Men", "rating": 4, "is_bestselling": false, "author": { "name": "John Steinbeck", "email": "john.steinbeck@example.com" } }
+]

@@ -1,0 +1,7 @@
+Admin panel ships automatically with Django.
+url: /admin/
+
+Create Superuser:
+python manage.py createsuperuser
+
+Register Models in Admin Panel from admin.py
