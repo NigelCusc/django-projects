@@ -2,7 +2,7 @@
 <article>
     <a href="{% url 'blog-posts:post_detail' slug=post.slug %}">
       <div class="post-content">
-        <img alt="{{ post.title }}" src="{% static 'blog/images/'|add:post.image %}">
+        <img alt="{{ post.title }}" src="{% static 'blog/images/'|add:post.image_name %}">
         <h3>{{ post.title | title }}</h3>
         <p class="post-date">
           {{ post.date | date:"d F Y" }}

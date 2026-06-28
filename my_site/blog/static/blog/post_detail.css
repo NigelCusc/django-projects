@@ -26,11 +26,36 @@
     color: var(--color-surface-raised);
 }
 
-.post-summary p {
+.post-summary p,
+.post-summary address,
+.post-summary a {
     margin: 0;
     line-height: 1.7;
     color: var(--color-surface-raised);
     font-size: 1.05rem;
+}
+
+.post-summary .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.post-summary .tag {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    background: var(--color-surface-raised);
+    color: var(--color-text);
+}
+
+.post-summary .tag:hover {
+    background: var(--color-accent);
+    color: var(--color-bg);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .post-content {
