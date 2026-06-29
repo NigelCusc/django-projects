@@ -1,0 +1,61 @@
+body {
+    font-family: "Roboto", system-ui;
+    margin: 0;
+}
+
+form {
+    margin: 3rem auto;
+    width: 90%;
+    max-width: 40rem;
+    padding: 2rem;
+    border-radius: 12px;
+    background-color: #2f2c20;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    color: #e4e1d9;
+}
+
+button {
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    background-color: #3f3f37;
+    color: #e4e1d9;
+    border: 1px solid #3f3f37;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-top: 1rem;
+}
+
+button:hover,
+button:active {
+    background-color: #5f5f57;
+    border-color: #5f5f57;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}
+
+.form-control label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-control input,
+.form-control textarea {
+    display: block;
+    width: 100%;
+    font: inherit;
+    padding: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-control textarea {
+    resize: vertical;
+    min-height: 14rem;
+}
